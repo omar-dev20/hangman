@@ -7,6 +7,9 @@
   .save-own{
     flex-direction:column;
   }
+  .save-own button{
+    margin: 5px 0;
+  }
 }
 
 body {
