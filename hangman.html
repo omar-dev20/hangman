@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="hangman.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hangman game</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+rel="stylesheet"/>
+      <link rel="stylesheet" href="normalize.css"/>
+    <link rel="stylesheet" href="css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p >hangman game</p>
+            <button id="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+        <div class="category load-hidden">
+          Word From: <span></span>
+        </div>
+            <div class="hint"></div>
+        </header>
+    <main >
+    <div class="row">
+        <div class="hangman-draw">
+        <div class="counter"><span class="count"></span></div>
+         <div class="the-draw">
+            <div class="the-stand load-hidden"></div>
+            <div class="the-hang load-hidden"></div>
+            <div class="the-rope load-hidden"></div>
+            <div class="head load-hidden"></div>
+            <div class="body load-hidden"></div>
+            <div class="arms load-hidden"></div>
+            <div class="legs load-hidden"></div>
+         </div>
+        </div>
+    <div class="letters">
+    </div>
+    <div class="play load-hidden">
+            <button id="timer" class="btn"><i class="fa-solid fa-hourglass-start"></i> timer</button>
+            <button id="no-timer" class="btn">no timer</button>
+          </div>
+    </main>  
+    </div>
+
+    <div class="letters-guess"></div>
+    <div class="game-info">
+          <button class="btn-info btn-leader">
+           view the leaderboard  <i class="fa-solid fa-crown"></i>
+          </button>
+    </div>
+    <div class="game-info">
+          <button class="btn-info btn-leader btn-intro">
+           view how to play  <i class="fa-solid fa-info-circle"></i>
+          </button>
+    </div>
+    <div class="game-info">
+          <button class="btn-info btn-add">
+           do Yoy want to add your own word? 
+          </button>
+    </div>
+<script src="hangman.js" defer></script>
+</body>
+</html>
