@@ -3,6 +3,11 @@
   color: var(--color);
   text-transform: capitalize;
 }
+@media (max-width: 767px){
+  .save-own{
+    flex-direction:column;
+  }
+}
 
 body {
   font-family: "Cairo", sans-serif;
