@@ -239,7 +239,7 @@ input.style.cssText = `display: flex;
     text-transform: uppercase;
     cursor: pointer;`;
     input.appendChild(submit);
-function saveUser(user,time){
+function saveUsers(user,time){
     let leaders = JSON.parse(localStorage.getItem('leaders')) || [];
     let result ={
        name:user.trim(),
@@ -314,7 +314,7 @@ function createWinPop() {
     }
         submit.addEventListener("click", function () {
          if (userInput.value.trim() === '') return;
-            saveUser(userInput.value,counterIndex);
+            saveUsers(userInput.value,counterIndex);
 
     });
     overlay.addEventListener('click', removeWin);
