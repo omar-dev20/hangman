@@ -240,7 +240,7 @@ input.style.cssText = `display: flex;
     cursor: pointer;`;
     input.appendChild(submit);
 function saveUsers(user,time){
-    let leaders = JSON.parse(localStorage.getItem('leaders')) || [];
+    let leaders = JSON.parse(localStorage.getItem('all-leaders')) || [];
     let result ={
        name:user.trim(),
         time:time
@@ -256,7 +256,7 @@ function saveUsers(user,time){
     }
     leaders.sort((a,b) => a.time - b.time);
     leaders = leaders.slice(0,5);
-    localStorage.setItem('leaders', JSON.stringify(leaders));
+    localStorage.setItem('all-leaders', JSON.stringify(leaders));
 
     }
 let close = document.createElement("button");
@@ -431,7 +431,7 @@ function leaderPOP() {
     let overlay = document.createElement("div");
     overlay.style.cssText = "position:fixed; inset:0; background:rgba(0, 0, 0, 0.6); z-index:9998; backdrop-filter:blur(5px);";
 
-    let leaders = JSON.parse(localStorage.getItem('leaders')) || [];
+    let leaders = JSON.parse(localStorage.getItem('all-leaders')) || [];
     let popup = document.createElement("div");
     popup.className = 'leader-popup';
     popup.style.cssText = "z-index:9999; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); backdrop-filter:blur(15px); background:rgba(255,255,255,0.1); padding:40px; text-align:center; border-radius:15px; color:var(--color); border:1px solid var(--primary);";
