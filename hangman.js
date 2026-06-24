@@ -313,6 +313,7 @@ function createWinPop() {
 
     }
         submit.addEventListener("click", function () {
+         if (userInput.value.trim() === '') return;
             saveUser(userInput.value,counterIndex);
 
     });
